@@ -1,9 +1,47 @@
-:root {
- 
-
-  color-scheme: light dark;
+*{
+   padding: 0;
+   margin: 0;
+}
+ :root {  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #f9f9f9;
+  padding: 0;
+  margin: 0;
+}
 
+/* src/pages/NotFound.css */
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height of the viewport */
+  background-color: #107069; /* Light red background */
+  color: #ffffff; /* Dark red text */
+  text-align: center;
+  direction: rtl;
+}
 
+.not-found-container h1 {
+  font-size: 3rem; /* Large font size for the heading */
+  margin-bottom: 1rem;
+}
+
+.not-found-container p {
+  font-size: 1.25rem; /* Medium font size for the paragraph */
+}
+
+.not-found-button {
+  margin-top: 2rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #c8a579; /* Bootstrap danger color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.not-found-button:hover {
+  background-color: #fff; /* Darker shade on hover */
 }
