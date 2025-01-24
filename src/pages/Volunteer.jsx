@@ -98,9 +98,6 @@ const Volunteer = () => {
           </div>
         </div>
       </div>
-      <div className={styles.footer}>
-        <p>جميع الحقوق محفوظة لمؤسسة القمة البرمجية 2025</p>
-      </div>
     </div>
   );
 };
