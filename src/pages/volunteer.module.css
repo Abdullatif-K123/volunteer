@@ -8,7 +8,8 @@
     background-color: #f9f9f9;
     color: #000;
     width: 100%; 
-   
+    min-height: 100vh; 
+    overflow: hidden;
   }
   
   /* Top images section */
@@ -87,13 +88,23 @@
     border-radius: 5px;
     width: 360px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .loading {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    direction: rtl;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Take the full viewport height */
+    width: 100%; /* Take the full viewport width */
    
   }
-  
   /* Footer */
-  .footer { 
-    margin-top: 40px;
+  .footer {  
     text-align: center; 
     width: 100%;
+    margin-bottom: 20px;
   }
   
