@@ -87,13 +87,12 @@
     border-radius: 5px;
     width: 360px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+   
   }
   
   /* Footer */
-  .footer {
-    position: absolute;
-    bottom: 2px;
+  .footer { 
+    margin-top: 40px;
     text-align: center; 
     width: 100%;
   }
