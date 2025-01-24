@@ -35,6 +35,7 @@
     align-items: center;
     flex-grow: 1; /* Push the footer to the bottom */
     gap: 30px;
+    direction: rtl;
     text-align: center; /* Center text for RTL and LTR */
     width: 100%;
   }

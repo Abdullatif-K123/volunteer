@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import axios from "axios";
 import styles from "./volunteer.module.css";
+import NotFoundUser from "./NotFoundUser";
 import { MagnifyingGlass } from "react-loader-spinner";
 const Participant = () => {
   const { id } = useParams();
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
-  //   const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
   const baseUrl = import.meta.env.VITE_API_BASE_URL;
   const apiKey = import.meta.env.VITE_API_BASE_API_KEY;
   useEffect(() => {
@@ -23,7 +24,7 @@ const Participant = () => {
       } catch (err) {
         // On failure, set dummy data
         console.error("Failed to fetch user data, using dummy data." + err);
-        // setError("Failed to fetch user data. Displaying fallback data.");
+        setError("Failed to fetch user data. Displaying fallback data.");
         setUserData({
           name: "أحمد محمد",
           organization: "شركة مثال",
@@ -53,7 +54,7 @@ const Participant = () => {
         <p>جاري البحث...</p>
       </div>
     );
-  //   if (error) return <p>{error}</p>;
+  if (error) return <NotFoundUser />;
 
   return (
     <div className={styles.pageContainer}>
