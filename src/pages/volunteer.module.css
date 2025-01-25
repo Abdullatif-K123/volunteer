@@ -1,14 +1,13 @@
 /* General container for the page */
 .pageContainer {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
+    flex-direction: column; 
     align-items: center; 
+    gap: 40px;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     color: #000;
-    width: 100%; 
-    min-height: 100vh; 
+    width: 100%;  
     overflow: hidden;
   }
   
@@ -22,16 +21,16 @@
   .image {
     height: auto;
     border-radius: 8px;
-     width: 100px;
-     height: 100px;
+     width: 75px;
+     height: 75px;
      padding: 5px 20px;
   }
    
   .image2 {
     height: auto;
     border-radius: 8px;
-     width: 150px;
-     height: 100px;
+     width: 125px;
+     height: 75px;
      padding: 4px 20px;
   }
   
@@ -42,7 +41,7 @@
     justify-content: center;
     align-items: center;
     flex-grow: 1; /* Push the footer to the bottom */
-    gap: 30px;
+    gap: 25px;
     direction: rtl;
     text-align: center; /* Center text for RTL and LTR */
     width: 100%;
