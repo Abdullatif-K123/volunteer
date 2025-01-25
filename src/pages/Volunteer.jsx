@@ -92,16 +92,28 @@ const Volunteer = () => {
         />
         {/* User Data */}
         <div className={styles.userDataSection}>
-          <div className={styles.userDataRow}>
-            <p>
-              <strong>الاسم:</strong> {userData?.name || "لا يوجد"}
-            </p>
-          </div>
-          <div className={styles.userDataRow}>
-            <p>
-              <strong>رقم الجوال:</strong> {userData?.phone || "لا يوجد"}
-            </p>
-          </div>
+          {!userData?.attendance ? (
+            <div className={styles.userDataRowAlert}>
+              <p>
+                الرجاء ابراز الرمز عند الحضور واتمام اجراء مسح الرمز لدى
+                الاستقبال
+              </p>
+            </div>
+          ) : (
+            <>
+              <div className={styles.userDataRow}>
+                <p>
+                  <strong>الاسم:</strong> {userData?.name || "لا يوجد"}
+                </p>
+              </div>
+
+              <div className={styles.userDataRow}>
+                <p>
+                  <strong>رقم الجوال:</strong> {userData?.phone || "لا يوجد"}
+                </p>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -69,7 +69,7 @@ const Participant = () => {
 
       {/* QR Code */}
       <div className={styles.centerSection}>
-        <h1>زائر</h1>
+        <h1>مشارك</h1>
         <div className={styles.qrCodeSection}>
           <div className={styles.qrCodeOuterWrapper}>
             <div className={styles.qrCodeWrapper}>
@@ -90,21 +90,32 @@ const Participant = () => {
 
         {/* User Data */}
         <div className={styles.userDataSection}>
-          <div className={styles.userDataRow}>
-            <p>
-              <strong>الاسم:</strong> {userData?.name || "لا يوجد"}
-            </p>
-          </div>
-          <div className={styles.userDataRow}>
-            <p>
-              <strong>الجهة:</strong> {userData?.reffered || "لا يوجد"}
-            </p>
-          </div>
-          <div className={styles.userDataRow}>
-            <p>
-              <strong>رقم الجوال:</strong> {userData?.phone || "لا يوجد"}
-            </p>
-          </div>
+          {!userData?.attendance ? (
+            <div className={styles.userDataRowAlert}>
+              <p>
+                الرجاء ابراز الرمز عند الحضور واتمام اجراء مسح الرمز لدى
+                الاستقبال
+              </p>
+            </div>
+          ) : (
+            <>
+              <div className={styles.userDataRow}>
+                <p>
+                  <strong>الاسم:</strong> {userData?.name || "لا يوجد"}
+                </p>
+              </div>
+              <div className={styles.userDataRow}>
+                <p>
+                  <strong>الجهة:</strong> {userData?.reffered || "لا يوجد"}
+                </p>
+              </div>
+              <div className={styles.userDataRow}>
+                <p>
+                  <strong>رقم الجوال:</strong> {userData?.phone || "لا يوجد"}
+                </p>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
