@@ -79,7 +79,7 @@
   }
   /* User data section */
   .userDataSection {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -100,7 +100,8 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   .userDataRowAlert{
-    font-size: 20px;
+    max-width: 280px;
+    font-size: 18px;
     font-weight: bold;
     background-color: #c8a579;
     padding: 10px; 

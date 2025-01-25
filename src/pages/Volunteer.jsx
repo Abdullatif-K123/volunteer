@@ -79,7 +79,7 @@ const Volunteer = () => {
                   تم تأكيد الحضور بنجاح
                 </p>
               ) : (
-                <QRCodeSVG value={id} size={160} />
+                <QRCodeSVG value={id} size={150} />
               )}
             </div>
           </div>
