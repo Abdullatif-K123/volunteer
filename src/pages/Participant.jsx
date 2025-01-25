@@ -5,6 +5,9 @@ import axios from "axios";
 import styles from "./volunteer.module.css";
 import NotFoundUser from "./NotFoundUser";
 import { MagnifyingGlass } from "react-loader-spinner";
+import PhoneImage from "../assets/image-phone.png";
+import LogoMontada from "../assets/logo-montada.png";
+import IdLogo from "../assets/id-logo.png";
 const Participant = () => {
   const { id } = useParams();
   const [userData, setUserData] = useState(null);
@@ -60,16 +63,8 @@ const Participant = () => {
     <div className={styles.pageContainer}>
       {/* Top Images */}
       <div className={styles.topImages}>
-        <img
-          src="/path-to-image-1.jpg"
-          alt="Image 1"
-          className={styles.image}
-        />
-        <img
-          src="/path-to-image-2.jpg"
-          alt="Image 2"
-          className={styles.image}
-        />
+        <img src={PhoneImage} alt="Image 1" className={styles.image} />
+        <img src={LogoMontada} alt="Image 2" className={styles.image2} />
       </div>
 
       {/* QR Code */}
@@ -86,21 +81,32 @@ const Participant = () => {
             </div>
           </div>
         </div>
+        <img
+          src={IdLogo}
+          alt="Image 1"
+          className={styles.image}
+          style={{ marginTop: "-35px" }}
+        />
 
         {/* User Data */}
         <div className={styles.userDataSection}>
           <div className={styles.userDataRow}>
-            <strong>الاسم:</strong> {userData?.name || "N/A"}
+            <p>
+              <strong>الاسم:</strong> {userData?.name || "لا يوجد"}
+            </p>
           </div>
           <div className={styles.userDataRow}>
-            <strong>الجهة:</strong> {userData?.reffered || "N/A"}
+            <p>
+              <strong>الجهة:</strong> {userData?.reffered || "لا يوجد"}
+            </p>
           </div>
           <div className={styles.userDataRow}>
-            <strong>رقم الجوال:</strong> {userData?.phone || "N/A"}
+            <p>
+              <strong>رقم الجوال:</strong> {userData?.phone || "لا يوجد"}
+            </p>
           </div>
         </div>
       </div>
-      
     </div>
   );
 };
